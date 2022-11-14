@@ -15,7 +15,7 @@ class TableViewController: UITableViewController {
     var count2 = 0
     var cellArray = [UITableViewCell]()
     
-    var viewController = ViewController()
+    var viewController = Answer0ViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,19 +26,19 @@ class TableViewController: UITableViewController {
         tableView.dataSource = self
         tableView.delegate = self
 
-        tableView.register(UINib(nibName: "TableViewCell2", bundle: nil), forCellReuseIdentifier: "Cell")
+        tableView.register(UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
         self.tableView.backgroundColor = UIColor.clear
         
     }
     
     var isChecked = false
-    var cell2Array = [TableViewCell2]()
+    var cell2Array = [TableViewCell]()
 
     //cell構築
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableViewCell2 {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? TableViewCell {
             let themeArray = [Global.shared.randomTheme.a,Global.shared.randomTheme.b,Global.shared.randomTheme.c,Global.shared.randomTheme.d,Global.shared.randomTheme.e,Global.shared.randomTheme.f,Global.shared.randomTheme.g,Global.shared.randomTheme.h]
             
             cell.cellLabel.text = "\(themeArray[count])"
@@ -117,7 +117,7 @@ class TableViewController: UITableViewController {
         
         for i in Global.shared.cellArray {
             
-            let c = i as! TableViewCell2
+            let c = i as! TableViewCell
             c.isChecked = false
         }
 
@@ -125,11 +125,11 @@ class TableViewController: UITableViewController {
          let table = tableView.cellForRow(at: indexPath)
 
 
-         let b = table as! TableViewCell2
+         let b = table as! TableViewCell
          b.isChecked = true
         
         
-        let parent = self.parent as! ViewController
+        let parent = self.parent as! Answer0ViewController
         parent.isCheckedCount = indexPath.section
         
 

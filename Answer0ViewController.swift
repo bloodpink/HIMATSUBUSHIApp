@@ -8,7 +8,7 @@
 import UIKit
 import OrderedCollections
 
-class ViewController: UIViewController {
+class Answer0ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         
         for i in 0 ..< 8 {
 
-            let c = Global.shared.cellArray[i] as! TableViewCell2
+            let c = Global.shared.cellArray[i] as! TableViewCell
 
             if c.isChecked == false {
                 falseCount += 1
@@ -95,7 +95,7 @@ class ViewController: UIViewController {
             
             
             
-            let c = i as! TableViewCell2
+            let c = i as! TableViewCell
             
             
             if c.isChecked == true {

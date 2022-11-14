@@ -10,7 +10,7 @@ import UIKit
 class answer2ViewController: UIViewController {
     
     var atozArray = ["A","B","C","D","E","F","G","H"]
-    var viewController = ViewController()
+    var viewController = Answer0ViewController()
 
 
     override func viewDidLoad() {
