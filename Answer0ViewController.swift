@@ -3,7 +3,7 @@
 //  HIMATSUBUSHIapp
 //
 //  Created by 小川汰賀 on 2022/07/30.
-//isCheckeArrayを使う。選択されたセルが何番目かをここで記録。 isCheckedArray
+
 
 import UIKit
 import OrderedCollections
@@ -11,20 +11,16 @@ import OrderedCollections
 class Answer0ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
-    
     @IBOutlet weak var container: UIView!
+    
     //回答用者1周するカウント
     var count = 0
     //何番目のセルか（TableViewControllerから受け取る用）
     var isCheckedCount = 0
-    
     var kugiriCount = 0
-    
     var quetionerDictionaryArray : OrderedDictionary <String,Int> = [:]
     var quetionerArray = [PlayerNameAndPoint]()
-    
     var quetionerPlayer : String = ""
-    
     
     var themeArray = [Global.shared.randomTheme.a,Global.shared.randomTheme.b,Global.shared.randomTheme.c,Global.shared.randomTheme.d,Global.shared.randomTheme.e,Global.shared.randomTheme.f,Global.shared.randomTheme.g,Global.shared.randomTheme.h]
     
@@ -148,7 +144,6 @@ class Answer0ViewController: UIViewController {
            //cellArray.appende(cell)はviewController画面に遷移した時に毎回行われる。その為１出題者につき全員の回答が終了したらまたcellがappendされることを見越して、格納されている８つcellを削除する必要がある。そうしないと１６こ、２４こというセルが格納され,falseCountで正しい計算ができなくなる（ちなみに１回答ごとに全てfalseにしている）
            Global.shared.cellArray.removeAll()
            
-//           Global.shared.array3.insert(quetionerDictionaryArray, at: Global.shared.count)
            Global.shared.playerPointNameArray.insert(quetionerArray, at: Global.shared.count)
            
            Global.shared.globalPlayerArray.insert(quetionerPlayer, at: Global.shared.count)
@@ -177,12 +172,11 @@ class Answer0ViewController: UIViewController {
     
     
     func labelTextChange () {
-        
         //ここでもglobalPlayerArrayの中身は回答者だけになっている
-            label.text = "\(Global.shared.globalPlayerArray[count])さんが思う\(quetionerPlayer)さんの演技はどれ？"
-
+        label.text = "\(Global.shared.globalPlayerArray[count])さんが思う\(quetionerPlayer)さんの演技はどれ？"
     }
     
+  
     
 }
 

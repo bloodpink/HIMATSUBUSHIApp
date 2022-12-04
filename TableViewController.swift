@@ -14,14 +14,13 @@ class TableViewController: UITableViewController {
     var count = 0
     var count2 = 0
     var cellArray = [UITableViewCell]()
-    
     var viewController = Answer0ViewController()
+    var isChecked = false
+    var cell2Array = [TableViewCell]()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
-
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -32,9 +31,9 @@ class TableViewController: UITableViewController {
         
     }
     
-    var isChecked = false
-    var cell2Array = [TableViewCell]()
-
+    
+    
+    
     //cell構築
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -55,12 +54,10 @@ class TableViewController: UITableViewController {
                 count = 0
             }
 
-
             
             Global.shared.cellArray.append(cell)
             return cell
         }
-        
         
         return UITableViewCell()
     }
@@ -122,12 +119,10 @@ class TableViewController: UITableViewController {
         }
 
 
-         let table = tableView.cellForRow(at: indexPath)
+        let table = tableView.cellForRow(at: indexPath)
 
-
-         let b = table as! TableViewCell
-         b.isChecked = true
-        
+        let b = table as! TableViewCell
+        b.isChecked = true
         
         let parent = self.parent as! Answer0ViewController
         parent.isCheckedCount = indexPath.section

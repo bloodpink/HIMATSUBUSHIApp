@@ -88,8 +88,8 @@ class answer2ViewController: UIViewController {
     @IBOutlet weak var player8AnswerLabel: UILabel!
     
     @IBOutlet weak var roundLabel: UILabel!
-    
     @IBOutlet weak var nextButtonLabel: UIButton!
+    
     
     
     @IBAction func nextButton(_ sender: Any) {
@@ -133,11 +133,6 @@ class answer2ViewController: UIViewController {
             performSegue(withIdentifier: "rank", sender: nil)
             return;
         }
-        
-        
-        
-
-        
         
         
         

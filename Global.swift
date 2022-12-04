@@ -31,16 +31,10 @@ class Global {
     var cellArray = [UITableViewCell]()
     //１戦毎の各プレイヤーのシーンを、プレイヤーの演技順に格納するための配列
     var orderActingSceneArray = [String]()
-    
-//    var playerAnswerArray = [Int]()
-
-
     //回答したセルが何番目かを格納
     var isCheckedNumberArray = [[Int]]()
-    
     //各プレイヤーのポイント
     var pointArray = [Int]()
-    
     //各プレイヤーの名前とポイント
     var playerPointNameArray = [[PlayerNameAndPoint]]()
     //各場所で使う

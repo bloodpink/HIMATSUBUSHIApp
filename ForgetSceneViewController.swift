@@ -43,7 +43,7 @@ class ForgetSceneViewController: UIViewController {
     
     
     var dictionary = ["a":"b","b":"a"]
-    //シーンを確認する
+
 
     //アラートを出して自分のボタンを選ばせる。ボタンのテキストを「確認したら戻る」に戻す
     @IBAction func myPlayerSceneCheckButton(_ sender: Any) {
@@ -174,19 +174,6 @@ class ForgetSceneViewController: UIViewController {
                 }
             }
         }
-    
-
-        
-
-                
-        
-
-        
-        
-
-        
-        
-
         
         
         
@@ -195,19 +182,11 @@ class ForgetSceneViewController: UIViewController {
         alertController.addAction(player3Button)
         
         
-        
-   
-     
-        
-        
-        
         present(alertController, animated: true, completion: nil)
-
-        //例えば山田さんのシーンを確認する場合、山田さんが何のシーンだったのかを取ってくる昼用がある
-        //この場合全てのプレイヤーが確認終了後の話だからrandomSceneは使えない　そのため　配列を用意する必要がある。配列の場合　山田さんが何番目だったかによる。
-        //だが山田さんの名前を辞書にキー値にしていれば　山田さんの値をとってくることができる？
         
     }
+    
+    
     
     
     func dictionaryAction () {

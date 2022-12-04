@@ -145,13 +145,10 @@ class Answer3ViewController: UIViewController {
             Global.shared.count = 0
             Global.shared.roundConut = 1
             Global.shared.globalPlayerArray.removeAll()
-            
             Global.shared.roundApeendCount = 0
             Global.shared.globalThemeArray = [Theme]()
             Global.shared.randomTheme = nil
             Global.shared.orderActingSceneArray.removeAll()
-//            Global.shared.playerAnswerArray.removeAll()
-
             Global.shared.pointArray.removeAll()
             Global.shared.playerPointNameArray.removeAll()
             Global.shared.playerSceneList.removeAll()
